@@ -39,20 +39,20 @@
         <script src="js/labels.js"></script>
         <script src="js/leaflet-control-geocoder.Geocoder.js"></script>
         <script src="js/leaflet-measure.js"></script>
-        <script src="data/Parking_Nabi_yaar_1.js"></script>
-        <script src="data/Sous_Batiments_Nabi_Yaar_2.js"></script>
-        <script src="data/Sous_Batiments_Nabi_Yaar_3.js"></script>
+        <script src="data/Parking_1.js"></script>
+        <script src="data/lectricit_2.js"></script>
+        <script src="data/Matriaux_3.js"></script>
         <script src="data/Poteaudincendie_4.js"></script>
         <script src="data/Parking_5.js"></script>
-        <script src="data/Sous_btiments_NaabRaaga_Construit_6.js"></script>
-        <script src="data/Sous_btiments_NaabRaaga_Construit_7.js"></script>
-        <script src="data/Parking_Pagalayiri_8.js"></script>
-        <script src="data/Sous_batiments_Pagalayiri_9.js"></script>
-        <script src="data/Sous_batiments_Pagalayiri_10.js"></script>
+        <script src="data/lectricit_6.js"></script>
+        <script src="data/Matriaux_7.js"></script>
+        <script src="data/Parking_8.js"></script>
+        <script src="data/lectricit_9.js"></script>
+        <script src="data/Matriaux_10.js"></script>
         <script src="data/Poteaudincendie_11.js"></script>
-        <script src="data/ParkingBaskuy_12.js"></script>
-        <script src="data/Sous_batiments_Construit_BASKUY_13.js"></script>
-        <script src="data/Sous_batiments_Construit_BASKUY_14.js"></script>
+        <script src="data/Parking_12.js"></script>
+        <script src="data/lectricit_13.js"></script>
+        <script src="data/Matriaux_14.js"></script>
         <script src="data/Poteau_dincendie_15.js"></script>
         <script>
         var highlightLayer;
@@ -73,7 +73,7 @@
         }
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
-        }).fitBounds([[12.381987473994148,-1.5549962002697018],[12.385460541160537,-1.5505352846577813]]);
+        }).fitBounds([[12.38019374918516,-1.5569095067326235],[12.38713988351794,-1.5479876755087827]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -145,7 +145,7 @@
         });
         layer_OSMStandard_0;
         map.addLayer(layer_OSMStandard_0);
-        function pop_Parking_Nabi_yaar_1(feature, layer) {
+        function pop_Parking_1(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     for (var i in e.target._eventParents) {
@@ -181,9 +181,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Parking_Nabi_yaar_1_0() {
+        function style_Parking_1_0() {
             return {
-                pane: 'pane_Parking_Nabi_yaar_1',
+                pane: 'pane_Parking_1',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -196,21 +196,21 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_Parking_Nabi_yaar_1');
-        map.getPane('pane_Parking_Nabi_yaar_1').style.zIndex = 401;
-        map.getPane('pane_Parking_Nabi_yaar_1').style['mix-blend-mode'] = 'normal';
-        var layer_Parking_Nabi_yaar_1 = new L.geoJson(json_Parking_Nabi_yaar_1, {
+        map.createPane('pane_Parking_1');
+        map.getPane('pane_Parking_1').style.zIndex = 401;
+        map.getPane('pane_Parking_1').style['mix-blend-mode'] = 'normal';
+        var layer_Parking_1 = new L.geoJson(json_Parking_1, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Parking_Nabi_yaar_1',
-            layerName: 'layer_Parking_Nabi_yaar_1',
-            pane: 'pane_Parking_Nabi_yaar_1',
-            onEachFeature: pop_Parking_Nabi_yaar_1,
-            style: style_Parking_Nabi_yaar_1_0,
+            dataVar: 'json_Parking_1',
+            layerName: 'layer_Parking_1',
+            pane: 'pane_Parking_1',
+            onEachFeature: pop_Parking_1,
+            style: style_Parking_1_0,
         });
-        bounds_group.addLayer(layer_Parking_Nabi_yaar_1);
-        map.addLayer(layer_Parking_Nabi_yaar_1);
-        function pop_Sous_Batiments_Nabi_Yaar_2(feature, layer) {
+        bounds_group.addLayer(layer_Parking_1);
+        map.addLayer(layer_Parking_1);
+        function pop_lectricit_2(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     for (var i in e.target._eventParents) {
@@ -249,11 +249,11 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Sous_Batiments_Nabi_Yaar_2_0(feature) {
+        function style_lectricit_2_0(feature) {
             switch(String(feature.properties['Electricit'])) {
                 case 'Non':
                     return {
-                pane: 'pane_Sous_Batiments_Nabi_Yaar_2',
+                pane: 'pane_lectricit_2',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -268,7 +268,7 @@
                     break;
                 case 'Oui':
                     return {
-                pane: 'pane_Sous_Batiments_Nabi_Yaar_2',
+                pane: 'pane_lectricit_2',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -283,21 +283,21 @@
                     break;
             }
         }
-        map.createPane('pane_Sous_Batiments_Nabi_Yaar_2');
-        map.getPane('pane_Sous_Batiments_Nabi_Yaar_2').style.zIndex = 402;
-        map.getPane('pane_Sous_Batiments_Nabi_Yaar_2').style['mix-blend-mode'] = 'normal';
-        var layer_Sous_Batiments_Nabi_Yaar_2 = new L.geoJson(json_Sous_Batiments_Nabi_Yaar_2, {
+        map.createPane('pane_lectricit_2');
+        map.getPane('pane_lectricit_2').style.zIndex = 402;
+        map.getPane('pane_lectricit_2').style['mix-blend-mode'] = 'normal';
+        var layer_lectricit_2 = new L.geoJson(json_lectricit_2, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Sous_Batiments_Nabi_Yaar_2',
-            layerName: 'layer_Sous_Batiments_Nabi_Yaar_2',
-            pane: 'pane_Sous_Batiments_Nabi_Yaar_2',
-            onEachFeature: pop_Sous_Batiments_Nabi_Yaar_2,
-            style: style_Sous_Batiments_Nabi_Yaar_2_0,
+            dataVar: 'json_lectricit_2',
+            layerName: 'layer_lectricit_2',
+            pane: 'pane_lectricit_2',
+            onEachFeature: pop_lectricit_2,
+            style: style_lectricit_2_0,
         });
-        bounds_group.addLayer(layer_Sous_Batiments_Nabi_Yaar_2);
-        map.addLayer(layer_Sous_Batiments_Nabi_Yaar_2);
-        function pop_Sous_Batiments_Nabi_Yaar_3(feature, layer) {
+        bounds_group.addLayer(layer_lectricit_2);
+        map.addLayer(layer_lectricit_2);
+        function pop_Matriaux_3(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     for (var i in e.target._eventParents) {
@@ -336,11 +336,11 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Sous_Batiments_Nabi_Yaar_3_0(feature) {
+        function style_Matriaux_3_0(feature) {
             switch(String(feature.properties['Nature'])) {
                 case 'Bois':
                     return {
-                pane: 'pane_Sous_Batiments_Nabi_Yaar_3',
+                pane: 'pane_Matriaux_3',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -355,7 +355,7 @@
                     break;
                 case 'Brique':
                     return {
-                pane: 'pane_Sous_Batiments_Nabi_Yaar_3',
+                pane: 'pane_Matriaux_3',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -370,7 +370,7 @@
                     break;
                 case 'Tôle':
                     return {
-                pane: 'pane_Sous_Batiments_Nabi_Yaar_3',
+                pane: 'pane_Matriaux_3',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -385,20 +385,20 @@
                     break;
             }
         }
-        map.createPane('pane_Sous_Batiments_Nabi_Yaar_3');
-        map.getPane('pane_Sous_Batiments_Nabi_Yaar_3').style.zIndex = 403;
-        map.getPane('pane_Sous_Batiments_Nabi_Yaar_3').style['mix-blend-mode'] = 'normal';
-        var layer_Sous_Batiments_Nabi_Yaar_3 = new L.geoJson(json_Sous_Batiments_Nabi_Yaar_3, {
+        map.createPane('pane_Matriaux_3');
+        map.getPane('pane_Matriaux_3').style.zIndex = 403;
+        map.getPane('pane_Matriaux_3').style['mix-blend-mode'] = 'normal';
+        var layer_Matriaux_3 = new L.geoJson(json_Matriaux_3, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Sous_Batiments_Nabi_Yaar_3',
-            layerName: 'layer_Sous_Batiments_Nabi_Yaar_3',
-            pane: 'pane_Sous_Batiments_Nabi_Yaar_3',
-            onEachFeature: pop_Sous_Batiments_Nabi_Yaar_3,
-            style: style_Sous_Batiments_Nabi_Yaar_3_0,
+            dataVar: 'json_Matriaux_3',
+            layerName: 'layer_Matriaux_3',
+            pane: 'pane_Matriaux_3',
+            onEachFeature: pop_Matriaux_3,
+            style: style_Matriaux_3_0,
         });
-        bounds_group.addLayer(layer_Sous_Batiments_Nabi_Yaar_3);
-        map.addLayer(layer_Sous_Batiments_Nabi_Yaar_3);
+        bounds_group.addLayer(layer_Matriaux_3);
+        map.addLayer(layer_Matriaux_3);
         function pop_Poteaudincendie_4(feature, layer) {
             layer.on({
                 mouseout: function(e) {
@@ -523,7 +523,7 @@
         });
         bounds_group.addLayer(layer_Parking_5);
         map.addLayer(layer_Parking_5);
-        function pop_Sous_btiments_NaabRaaga_Construit_6(feature, layer) {
+        function pop_lectricit_6(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     for (var i in e.target._eventParents) {
@@ -566,11 +566,11 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Sous_btiments_NaabRaaga_Construit_6_0(feature) {
+        function style_lectricit_6_0(feature) {
             switch(String(feature.properties['Electricit'])) {
                 case 'Non':
                     return {
-                pane: 'pane_Sous_btiments_NaabRaaga_Construit_6',
+                pane: 'pane_lectricit_6',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -585,7 +585,7 @@
                     break;
                 case 'Oui':
                     return {
-                pane: 'pane_Sous_btiments_NaabRaaga_Construit_6',
+                pane: 'pane_lectricit_6',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -600,21 +600,21 @@
                     break;
             }
         }
-        map.createPane('pane_Sous_btiments_NaabRaaga_Construit_6');
-        map.getPane('pane_Sous_btiments_NaabRaaga_Construit_6').style.zIndex = 406;
-        map.getPane('pane_Sous_btiments_NaabRaaga_Construit_6').style['mix-blend-mode'] = 'normal';
-        var layer_Sous_btiments_NaabRaaga_Construit_6 = new L.geoJson(json_Sous_btiments_NaabRaaga_Construit_6, {
+        map.createPane('pane_lectricit_6');
+        map.getPane('pane_lectricit_6').style.zIndex = 406;
+        map.getPane('pane_lectricit_6').style['mix-blend-mode'] = 'normal';
+        var layer_lectricit_6 = new L.geoJson(json_lectricit_6, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Sous_btiments_NaabRaaga_Construit_6',
-            layerName: 'layer_Sous_btiments_NaabRaaga_Construit_6',
-            pane: 'pane_Sous_btiments_NaabRaaga_Construit_6',
-            onEachFeature: pop_Sous_btiments_NaabRaaga_Construit_6,
-            style: style_Sous_btiments_NaabRaaga_Construit_6_0,
+            dataVar: 'json_lectricit_6',
+            layerName: 'layer_lectricit_6',
+            pane: 'pane_lectricit_6',
+            onEachFeature: pop_lectricit_6,
+            style: style_lectricit_6_0,
         });
-        bounds_group.addLayer(layer_Sous_btiments_NaabRaaga_Construit_6);
-        map.addLayer(layer_Sous_btiments_NaabRaaga_Construit_6);
-        function pop_Sous_btiments_NaabRaaga_Construit_7(feature, layer) {
+        bounds_group.addLayer(layer_lectricit_6);
+        map.addLayer(layer_lectricit_6);
+        function pop_Matriaux_7(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     for (var i in e.target._eventParents) {
@@ -657,11 +657,11 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Sous_btiments_NaabRaaga_Construit_7_0(feature) {
+        function style_Matriaux_7_0(feature) {
             switch(String(feature.properties['Nature'])) {
                 case 'Bois':
                     return {
-                pane: 'pane_Sous_btiments_NaabRaaga_Construit_7',
+                pane: 'pane_Matriaux_7',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -676,7 +676,7 @@
                     break;
                 case 'Brique':
                     return {
-                pane: 'pane_Sous_btiments_NaabRaaga_Construit_7',
+                pane: 'pane_Matriaux_7',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -691,7 +691,7 @@
                     break;
                 case 'Tôle':
                     return {
-                pane: 'pane_Sous_btiments_NaabRaaga_Construit_7',
+                pane: 'pane_Matriaux_7',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -706,21 +706,21 @@
                     break;
             }
         }
-        map.createPane('pane_Sous_btiments_NaabRaaga_Construit_7');
-        map.getPane('pane_Sous_btiments_NaabRaaga_Construit_7').style.zIndex = 407;
-        map.getPane('pane_Sous_btiments_NaabRaaga_Construit_7').style['mix-blend-mode'] = 'normal';
-        var layer_Sous_btiments_NaabRaaga_Construit_7 = new L.geoJson(json_Sous_btiments_NaabRaaga_Construit_7, {
+        map.createPane('pane_Matriaux_7');
+        map.getPane('pane_Matriaux_7').style.zIndex = 407;
+        map.getPane('pane_Matriaux_7').style['mix-blend-mode'] = 'normal';
+        var layer_Matriaux_7 = new L.geoJson(json_Matriaux_7, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Sous_btiments_NaabRaaga_Construit_7',
-            layerName: 'layer_Sous_btiments_NaabRaaga_Construit_7',
-            pane: 'pane_Sous_btiments_NaabRaaga_Construit_7',
-            onEachFeature: pop_Sous_btiments_NaabRaaga_Construit_7,
-            style: style_Sous_btiments_NaabRaaga_Construit_7_0,
+            dataVar: 'json_Matriaux_7',
+            layerName: 'layer_Matriaux_7',
+            pane: 'pane_Matriaux_7',
+            onEachFeature: pop_Matriaux_7,
+            style: style_Matriaux_7_0,
         });
-        bounds_group.addLayer(layer_Sous_btiments_NaabRaaga_Construit_7);
-        map.addLayer(layer_Sous_btiments_NaabRaaga_Construit_7);
-        function pop_Parking_Pagalayiri_8(feature, layer) {
+        bounds_group.addLayer(layer_Matriaux_7);
+        map.addLayer(layer_Matriaux_7);
+        function pop_Parking_8(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     for (var i in e.target._eventParents) {
@@ -756,9 +756,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Parking_Pagalayiri_8_0() {
+        function style_Parking_8_0() {
             return {
-                pane: 'pane_Parking_Pagalayiri_8',
+                pane: 'pane_Parking_8',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -771,21 +771,21 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_Parking_Pagalayiri_8');
-        map.getPane('pane_Parking_Pagalayiri_8').style.zIndex = 408;
-        map.getPane('pane_Parking_Pagalayiri_8').style['mix-blend-mode'] = 'normal';
-        var layer_Parking_Pagalayiri_8 = new L.geoJson(json_Parking_Pagalayiri_8, {
+        map.createPane('pane_Parking_8');
+        map.getPane('pane_Parking_8').style.zIndex = 408;
+        map.getPane('pane_Parking_8').style['mix-blend-mode'] = 'normal';
+        var layer_Parking_8 = new L.geoJson(json_Parking_8, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Parking_Pagalayiri_8',
-            layerName: 'layer_Parking_Pagalayiri_8',
-            pane: 'pane_Parking_Pagalayiri_8',
-            onEachFeature: pop_Parking_Pagalayiri_8,
-            style: style_Parking_Pagalayiri_8_0,
+            dataVar: 'json_Parking_8',
+            layerName: 'layer_Parking_8',
+            pane: 'pane_Parking_8',
+            onEachFeature: pop_Parking_8,
+            style: style_Parking_8_0,
         });
-        bounds_group.addLayer(layer_Parking_Pagalayiri_8);
-        map.addLayer(layer_Parking_Pagalayiri_8);
-        function pop_Sous_batiments_Pagalayiri_9(feature, layer) {
+        bounds_group.addLayer(layer_Parking_8);
+        map.addLayer(layer_Parking_8);
+        function pop_lectricit_9(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     for (var i in e.target._eventParents) {
@@ -828,11 +828,11 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Sous_batiments_Pagalayiri_9_0(feature) {
+        function style_lectricit_9_0(feature) {
             switch(String(feature.properties['Electricit'])) {
                 case 'Non':
                     return {
-                pane: 'pane_Sous_batiments_Pagalayiri_9',
+                pane: 'pane_lectricit_9',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -847,7 +847,7 @@
                     break;
                 case 'Oui':
                     return {
-                pane: 'pane_Sous_batiments_Pagalayiri_9',
+                pane: 'pane_lectricit_9',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -862,21 +862,21 @@
                     break;
             }
         }
-        map.createPane('pane_Sous_batiments_Pagalayiri_9');
-        map.getPane('pane_Sous_batiments_Pagalayiri_9').style.zIndex = 409;
-        map.getPane('pane_Sous_batiments_Pagalayiri_9').style['mix-blend-mode'] = 'normal';
-        var layer_Sous_batiments_Pagalayiri_9 = new L.geoJson(json_Sous_batiments_Pagalayiri_9, {
+        map.createPane('pane_lectricit_9');
+        map.getPane('pane_lectricit_9').style.zIndex = 409;
+        map.getPane('pane_lectricit_9').style['mix-blend-mode'] = 'normal';
+        var layer_lectricit_9 = new L.geoJson(json_lectricit_9, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Sous_batiments_Pagalayiri_9',
-            layerName: 'layer_Sous_batiments_Pagalayiri_9',
-            pane: 'pane_Sous_batiments_Pagalayiri_9',
-            onEachFeature: pop_Sous_batiments_Pagalayiri_9,
-            style: style_Sous_batiments_Pagalayiri_9_0,
+            dataVar: 'json_lectricit_9',
+            layerName: 'layer_lectricit_9',
+            pane: 'pane_lectricit_9',
+            onEachFeature: pop_lectricit_9,
+            style: style_lectricit_9_0,
         });
-        bounds_group.addLayer(layer_Sous_batiments_Pagalayiri_9);
-        map.addLayer(layer_Sous_batiments_Pagalayiri_9);
-        function pop_Sous_batiments_Pagalayiri_10(feature, layer) {
+        bounds_group.addLayer(layer_lectricit_9);
+        map.addLayer(layer_lectricit_9);
+        function pop_Matriaux_10(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     for (var i in e.target._eventParents) {
@@ -919,11 +919,11 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Sous_batiments_Pagalayiri_10_0(feature) {
+        function style_Matriaux_10_0(feature) {
             switch(String(feature.properties['Nature'])) {
                 case 'Bois':
                     return {
-                pane: 'pane_Sous_batiments_Pagalayiri_10',
+                pane: 'pane_Matriaux_10',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -938,7 +938,7 @@
                     break;
                 case 'Brique':
                     return {
-                pane: 'pane_Sous_batiments_Pagalayiri_10',
+                pane: 'pane_Matriaux_10',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -953,7 +953,7 @@
                     break;
                 case 'Tôle':
                     return {
-                pane: 'pane_Sous_batiments_Pagalayiri_10',
+                pane: 'pane_Matriaux_10',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -968,20 +968,20 @@
                     break;
             }
         }
-        map.createPane('pane_Sous_batiments_Pagalayiri_10');
-        map.getPane('pane_Sous_batiments_Pagalayiri_10').style.zIndex = 410;
-        map.getPane('pane_Sous_batiments_Pagalayiri_10').style['mix-blend-mode'] = 'normal';
-        var layer_Sous_batiments_Pagalayiri_10 = new L.geoJson(json_Sous_batiments_Pagalayiri_10, {
+        map.createPane('pane_Matriaux_10');
+        map.getPane('pane_Matriaux_10').style.zIndex = 410;
+        map.getPane('pane_Matriaux_10').style['mix-blend-mode'] = 'normal';
+        var layer_Matriaux_10 = new L.geoJson(json_Matriaux_10, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Sous_batiments_Pagalayiri_10',
-            layerName: 'layer_Sous_batiments_Pagalayiri_10',
-            pane: 'pane_Sous_batiments_Pagalayiri_10',
-            onEachFeature: pop_Sous_batiments_Pagalayiri_10,
-            style: style_Sous_batiments_Pagalayiri_10_0,
+            dataVar: 'json_Matriaux_10',
+            layerName: 'layer_Matriaux_10',
+            pane: 'pane_Matriaux_10',
+            onEachFeature: pop_Matriaux_10,
+            style: style_Matriaux_10_0,
         });
-        bounds_group.addLayer(layer_Sous_batiments_Pagalayiri_10);
-        map.addLayer(layer_Sous_batiments_Pagalayiri_10);
+        bounds_group.addLayer(layer_Matriaux_10);
+        map.addLayer(layer_Matriaux_10);
         function pop_Poteaudincendie_11(feature, layer) {
             layer.on({
                 mouseout: function(e) {
@@ -1019,7 +1019,7 @@
         rotationOrigin: 'center center',
         icon: L.icon({
             iconUrl: 'markers/Poteaudincendie_11.svg',
-            iconSize: [23.560000000000013, 23.560000000000013]
+            iconSize: [23.56, 23.56]
         }),
                 interactive: true,
             }
@@ -1044,7 +1044,7 @@
         });
         bounds_group.addLayer(layer_Poteaudincendie_11);
         map.addLayer(layer_Poteaudincendie_11);
-        function pop_ParkingBaskuy_12(feature, layer) {
+        function pop_Parking_12(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     for (var i in e.target._eventParents) {
@@ -1104,9 +1104,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_ParkingBaskuy_12_0() {
+        function style_Parking_12_0() {
             return {
-                pane: 'pane_ParkingBaskuy_12',
+                pane: 'pane_Parking_12',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -1119,21 +1119,21 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_ParkingBaskuy_12');
-        map.getPane('pane_ParkingBaskuy_12').style.zIndex = 412;
-        map.getPane('pane_ParkingBaskuy_12').style['mix-blend-mode'] = 'normal';
-        var layer_ParkingBaskuy_12 = new L.geoJson(json_ParkingBaskuy_12, {
+        map.createPane('pane_Parking_12');
+        map.getPane('pane_Parking_12').style.zIndex = 412;
+        map.getPane('pane_Parking_12').style['mix-blend-mode'] = 'normal';
+        var layer_Parking_12 = new L.geoJson(json_Parking_12, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_ParkingBaskuy_12',
-            layerName: 'layer_ParkingBaskuy_12',
-            pane: 'pane_ParkingBaskuy_12',
-            onEachFeature: pop_ParkingBaskuy_12,
-            style: style_ParkingBaskuy_12_0,
+            dataVar: 'json_Parking_12',
+            layerName: 'layer_Parking_12',
+            pane: 'pane_Parking_12',
+            onEachFeature: pop_Parking_12,
+            style: style_Parking_12_0,
         });
-        bounds_group.addLayer(layer_ParkingBaskuy_12);
-        map.addLayer(layer_ParkingBaskuy_12);
-        function pop_Sous_batiments_Construit_BASKUY_13(feature, layer) {
+        bounds_group.addLayer(layer_Parking_12);
+        map.addLayer(layer_Parking_12);
+        function pop_lectricit_13(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     for (var i in e.target._eventParents) {
@@ -1176,11 +1176,11 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Sous_batiments_Construit_BASKUY_13_0(feature) {
+        function style_lectricit_13_0(feature) {
             switch(String(feature.properties['Electricit'])) {
                 case 'Non':
                     return {
-                pane: 'pane_Sous_batiments_Construit_BASKUY_13',
+                pane: 'pane_lectricit_13',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -1195,7 +1195,7 @@
                     break;
                 case 'Oui':
                     return {
-                pane: 'pane_Sous_batiments_Construit_BASKUY_13',
+                pane: 'pane_lectricit_13',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -1210,21 +1210,21 @@
                     break;
             }
         }
-        map.createPane('pane_Sous_batiments_Construit_BASKUY_13');
-        map.getPane('pane_Sous_batiments_Construit_BASKUY_13').style.zIndex = 413;
-        map.getPane('pane_Sous_batiments_Construit_BASKUY_13').style['mix-blend-mode'] = 'normal';
-        var layer_Sous_batiments_Construit_BASKUY_13 = new L.geoJson(json_Sous_batiments_Construit_BASKUY_13, {
+        map.createPane('pane_lectricit_13');
+        map.getPane('pane_lectricit_13').style.zIndex = 413;
+        map.getPane('pane_lectricit_13').style['mix-blend-mode'] = 'normal';
+        var layer_lectricit_13 = new L.geoJson(json_lectricit_13, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Sous_batiments_Construit_BASKUY_13',
-            layerName: 'layer_Sous_batiments_Construit_BASKUY_13',
-            pane: 'pane_Sous_batiments_Construit_BASKUY_13',
-            onEachFeature: pop_Sous_batiments_Construit_BASKUY_13,
-            style: style_Sous_batiments_Construit_BASKUY_13_0,
+            dataVar: 'json_lectricit_13',
+            layerName: 'layer_lectricit_13',
+            pane: 'pane_lectricit_13',
+            onEachFeature: pop_lectricit_13,
+            style: style_lectricit_13_0,
         });
-        bounds_group.addLayer(layer_Sous_batiments_Construit_BASKUY_13);
-        map.addLayer(layer_Sous_batiments_Construit_BASKUY_13);
-        function pop_Sous_batiments_Construit_BASKUY_14(feature, layer) {
+        bounds_group.addLayer(layer_lectricit_13);
+        map.addLayer(layer_lectricit_13);
+        function pop_Matriaux_14(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     for (var i in e.target._eventParents) {
@@ -1267,11 +1267,11 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Sous_batiments_Construit_BASKUY_14_0(feature) {
+        function style_Matriaux_14_0(feature) {
             switch(String(feature.properties['Nature'])) {
                 case 'Bois':
                     return {
-                pane: 'pane_Sous_batiments_Construit_BASKUY_14',
+                pane: 'pane_Matriaux_14',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -1286,7 +1286,7 @@
                     break;
                 case 'Brique':
                     return {
-                pane: 'pane_Sous_batiments_Construit_BASKUY_14',
+                pane: 'pane_Matriaux_14',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -1301,7 +1301,7 @@
                     break;
                 case 'Tôle':
                     return {
-                pane: 'pane_Sous_batiments_Construit_BASKUY_14',
+                pane: 'pane_Matriaux_14',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -1316,20 +1316,20 @@
                     break;
             }
         }
-        map.createPane('pane_Sous_batiments_Construit_BASKUY_14');
-        map.getPane('pane_Sous_batiments_Construit_BASKUY_14').style.zIndex = 414;
-        map.getPane('pane_Sous_batiments_Construit_BASKUY_14').style['mix-blend-mode'] = 'normal';
-        var layer_Sous_batiments_Construit_BASKUY_14 = new L.geoJson(json_Sous_batiments_Construit_BASKUY_14, {
+        map.createPane('pane_Matriaux_14');
+        map.getPane('pane_Matriaux_14').style.zIndex = 414;
+        map.getPane('pane_Matriaux_14').style['mix-blend-mode'] = 'normal';
+        var layer_Matriaux_14 = new L.geoJson(json_Matriaux_14, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Sous_batiments_Construit_BASKUY_14',
-            layerName: 'layer_Sous_batiments_Construit_BASKUY_14',
-            pane: 'pane_Sous_batiments_Construit_BASKUY_14',
-            onEachFeature: pop_Sous_batiments_Construit_BASKUY_14,
-            style: style_Sous_batiments_Construit_BASKUY_14_0,
+            dataVar: 'json_Matriaux_14',
+            layerName: 'layer_Matriaux_14',
+            pane: 'pane_Matriaux_14',
+            onEachFeature: pop_Matriaux_14,
+            style: style_Matriaux_14_0,
         });
-        bounds_group.addLayer(layer_Sous_batiments_Construit_BASKUY_14);
-        map.addLayer(layer_Sous_batiments_Construit_BASKUY_14);
+        bounds_group.addLayer(layer_Matriaux_14);
+        map.addLayer(layer_Matriaux_14);
         function pop_Poteau_dincendie_15(feature, layer) {
             layer.on({
                 mouseout: function(e) {
@@ -1405,23 +1405,23 @@
         var overlaysTree = [
         {label: '<b>Baskuy</b>', selectAllCheckbox: true, children: [
             {label: '<img src="legend/Poteau_dincendie_15.png" /> Poteau_d\'incendie', layer: layer_Poteau_dincendie_15},
-            {label: 'Sous_batiments_Construit_BASKUY<br /><table><tr><td style="text-align: center;"><img src="legend/Sous_batiments_Construit_BASKUY_14_Bois0.png" /></td><td>Bois</td></tr><tr><td style="text-align: center;"><img src="legend/Sous_batiments_Construit_BASKUY_14_Brique1.png" /></td><td>Brique</td></tr><tr><td style="text-align: center;"><img src="legend/Sous_batiments_Construit_BASKUY_14_Tôle2.png" /></td><td>Tôle</td></tr></table>', layer: layer_Sous_batiments_Construit_BASKUY_14},
-            {label: 'Sous_batiments_Construit_BASKUY<br /><table><tr><td style="text-align: center;"><img src="legend/Sous_batiments_Construit_BASKUY_13_Non0.png" /></td><td>Non</td></tr><tr><td style="text-align: center;"><img src="legend/Sous_batiments_Construit_BASKUY_13_Oui1.png" /></td><td>Oui</td></tr></table>', layer: layer_Sous_batiments_Construit_BASKUY_13},
-            {label: '<img src="legend/ParkingBaskuy_12.png" /> Parking Baskuy', layer: layer_ParkingBaskuy_12},]},
+            {label: 'Matériaux<br /><table><tr><td style="text-align: center;"><img src="legend/Matriaux_14_Bois0.png" /></td><td>Bois</td></tr><tr><td style="text-align: center;"><img src="legend/Matriaux_14_Brique1.png" /></td><td>Brique</td></tr><tr><td style="text-align: center;"><img src="legend/Matriaux_14_Tôle2.png" /></td><td>Tôle</td></tr></table>', layer: layer_Matriaux_14},
+            {label: 'Électricité<br /><table><tr><td style="text-align: center;"><img src="legend/lectricit_13_Non0.png" /></td><td>Non</td></tr><tr><td style="text-align: center;"><img src="legend/lectricit_13_Oui1.png" /></td><td>Oui</td></tr></table>', layer: layer_lectricit_13},
+            {label: '<img src="legend/Parking_12.png" /> Parking', layer: layer_Parking_12},]},
         {label: '<b>Pagalayiri</b>', selectAllCheckbox: true, children: [
             {label: '<img src="legend/Poteaudincendie_11.png" /> Poteau d\'incendie', layer: layer_Poteaudincendie_11},
-            {label: 'Sous_batiments_Pagalayiri<br /><table><tr><td style="text-align: center;"><img src="legend/Sous_batiments_Pagalayiri_10_Bois0.png" /></td><td>Bois</td></tr><tr><td style="text-align: center;"><img src="legend/Sous_batiments_Pagalayiri_10_Brique1.png" /></td><td>Brique</td></tr><tr><td style="text-align: center;"><img src="legend/Sous_batiments_Pagalayiri_10_Tôle2.png" /></td><td>Tôle</td></tr></table>', layer: layer_Sous_batiments_Pagalayiri_10},
-            {label: 'Sous_batiments_Pagalayiri<br /><table><tr><td style="text-align: center;"><img src="legend/Sous_batiments_Pagalayiri_9_Non0.png" /></td><td>Non</td></tr><tr><td style="text-align: center;"><img src="legend/Sous_batiments_Pagalayiri_9_Oui1.png" /></td><td>Oui</td></tr></table>', layer: layer_Sous_batiments_Pagalayiri_9},
-            {label: '<img src="legend/Parking_Pagalayiri_8.png" /> Parking_Pagalayiri', layer: layer_Parking_Pagalayiri_8},]},
+            {label: 'Matériaux<br /><table><tr><td style="text-align: center;"><img src="legend/Matriaux_10_Bois0.png" /></td><td>Bois</td></tr><tr><td style="text-align: center;"><img src="legend/Matriaux_10_Brique1.png" /></td><td>Brique</td></tr><tr><td style="text-align: center;"><img src="legend/Matriaux_10_Tôle2.png" /></td><td>Tôle</td></tr></table>', layer: layer_Matriaux_10},
+            {label: 'Électricité<br /><table><tr><td style="text-align: center;"><img src="legend/lectricit_9_Non0.png" /></td><td>Non</td></tr><tr><td style="text-align: center;"><img src="legend/lectricit_9_Oui1.png" /></td><td>Oui</td></tr></table>', layer: layer_lectricit_9},
+            {label: '<img src="legend/Parking_8.png" /> Parking', layer: layer_Parking_8},]},
         {label: '<b>Naab raaga</b>', selectAllCheckbox: true, children: [
-            {label: 'Sous_bâtiments_Naab Raaga_Construit<br /><table><tr><td style="text-align: center;"><img src="legend/Sous_btiments_NaabRaaga_Construit_7_Bois0.png" /></td><td>Bois</td></tr><tr><td style="text-align: center;"><img src="legend/Sous_btiments_NaabRaaga_Construit_7_Brique1.png" /></td><td>Brique</td></tr><tr><td style="text-align: center;"><img src="legend/Sous_btiments_NaabRaaga_Construit_7_Tôle2.png" /></td><td>Tôle</td></tr></table>', layer: layer_Sous_btiments_NaabRaaga_Construit_7},
-            {label: 'Sous_bâtiments_Naab Raaga_Construit<br /><table><tr><td style="text-align: center;"><img src="legend/Sous_btiments_NaabRaaga_Construit_6_Non0.png" /></td><td>Non</td></tr><tr><td style="text-align: center;"><img src="legend/Sous_btiments_NaabRaaga_Construit_6_Oui1.png" /></td><td>Oui</td></tr></table>', layer: layer_Sous_btiments_NaabRaaga_Construit_6},
+            {label: 'Matériaux<br /><table><tr><td style="text-align: center;"><img src="legend/Matriaux_7_Bois0.png" /></td><td>Bois</td></tr><tr><td style="text-align: center;"><img src="legend/Matriaux_7_Brique1.png" /></td><td>Brique</td></tr><tr><td style="text-align: center;"><img src="legend/Matriaux_7_Tôle2.png" /></td><td>Tôle</td></tr></table>', layer: layer_Matriaux_7},
+            {label: 'Électricité<br /><table><tr><td style="text-align: center;"><img src="legend/lectricit_6_Non0.png" /></td><td>Non</td></tr><tr><td style="text-align: center;"><img src="legend/lectricit_6_Oui1.png" /></td><td>Oui</td></tr></table>', layer: layer_lectricit_6},
             {label: '<img src="legend/Parking_5.png" /> Parking', layer: layer_Parking_5},]},
         {label: '<b>Nabi yaar</b>', selectAllCheckbox: true, children: [
             {label: '<img src="legend/Poteaudincendie_4.png" /> Poteau d\'incendie', layer: layer_Poteaudincendie_4},
-            {label: 'Sous_Batiments_Nabi_Yaar<br /><table><tr><td style="text-align: center;"><img src="legend/Sous_Batiments_Nabi_Yaar_3_Bois0.png" /></td><td>Bois</td></tr><tr><td style="text-align: center;"><img src="legend/Sous_Batiments_Nabi_Yaar_3_Brique1.png" /></td><td>Brique</td></tr><tr><td style="text-align: center;"><img src="legend/Sous_Batiments_Nabi_Yaar_3_Tôle2.png" /></td><td>Tôle</td></tr></table>', layer: layer_Sous_Batiments_Nabi_Yaar_3},
-            {label: 'Sous_Batiments_Nabi_Yaar<br /><table><tr><td style="text-align: center;"><img src="legend/Sous_Batiments_Nabi_Yaar_2_Non0.png" /></td><td>Non</td></tr><tr><td style="text-align: center;"><img src="legend/Sous_Batiments_Nabi_Yaar_2_Oui1.png" /></td><td>Oui</td></tr></table>', layer: layer_Sous_Batiments_Nabi_Yaar_2},
-            {label: '<img src="legend/Parking_Nabi_yaar_1.png" /> Parking_Nabi_yaar', layer: layer_Parking_Nabi_yaar_1},
+            {label: 'Matériaux<br /><table><tr><td style="text-align: center;"><img src="legend/Matriaux_3_Bois0.png" /></td><td>Bois</td></tr><tr><td style="text-align: center;"><img src="legend/Matriaux_3_Brique1.png" /></td><td>Brique</td></tr><tr><td style="text-align: center;"><img src="legend/Matriaux_3_Tôle2.png" /></td><td>Tôle</td></tr></table>', layer: layer_Matriaux_3},
+            {label: 'Électricité<br /><table><tr><td style="text-align: center;"><img src="legend/lectricit_2_Non0.png" /></td><td>Non</td></tr><tr><td style="text-align: center;"><img src="legend/lectricit_2_Oui1.png" /></td><td>Oui</td></tr></table>', layer: layer_lectricit_2},
+            {label: '<img src="legend/Parking_1.png" /> Parking', layer: layer_Parking_1},
             {label: "OSM Standard", layer: layer_OSMStandard_0, radioGroup: 'bm' },]},]
         var lay = L.control.layers.tree(null, overlaysTree,{
             //namedToggle: true,
